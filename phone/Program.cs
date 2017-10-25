@@ -47,8 +47,40 @@ namespace phone
         {
             string word = "";
 
-        }
+            for (int i1 = 0; i1 < letters[0].Length; i1++)
+            {
+                for (int i2 = 0; i2 < letters[1].Length; i2++)
+                {
+                    for (int i3 = 0; i3 < letters[2].Length; i3++)
+                    {
+                        for (int i4 = 0; i4 < letters[3].Length; i4++)
+                        {
+                            for (int i5 = 0; i5 < letters[4].Length; i5++)
+                            {
+                                for (int i6 = 0; i6 < letters[5].Length; i6++)
+                                {
+                                    for (int i7 = 0; i7 < letters[6].Length; i7++)
+                                    {
+                                        word = letters[0][i1].ToString();
+                                        word += letters[1][i2].ToString();
+                                        word += letters[2][i3].ToString();
+                                        word += letters[3][i4].ToString();
+                                        word += letters[4][i5].ToString();
+                                        word += letters[5][i6].ToString();
+                                        word += letters[6][i7].ToString();
 
-        //Added for test
+                                        using (System.IO.StreamWriter file = new System.IO.StreamWriter("WriteLines.txt", true))
+                                        {
+                                            file.WriteLine(word);
+                                        }
+                                        word = "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
